@@ -1,4 +1,5 @@
 #include <iostream>
+#include <assert.h>
 #include "List.h"
 
 using namespace std;
@@ -6,6 +7,8 @@ using namespace std;
 int main ()
 {
 	List a;
+	
+	assert (a.Nivel == 0);
 	
 	agregar (a, 1);
 	agregar (a, 3);
@@ -23,6 +26,8 @@ int main ()
 	agregarOrdenado (a, 3);
 	agregarOrdenado (a, 0);
 	agregarOrdenado (a, 46);
+	
+	assert (a.Nivel == 11);
 	
 	imprimirLista (a);
 }
